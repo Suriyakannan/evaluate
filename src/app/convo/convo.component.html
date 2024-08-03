@@ -1,0 +1,28 @@
+<div class="chatbot-container">
+    <button class="chatbot-toggler" (click)="toggleChatbot()">
+        <i class="pi pi-comment" style="font-size: 2rem"></i>
+      <!-- <span class="material-symbol-outlined">mode_comment</span> -->
+      <span class="material-symbol-outlined">close</span>
+    </button>
+    <div class="chatbot" [class.show]="showChatbot">
+      <header>
+        <h2>Convobot</h2>
+      </header>
+      <ul class="chatbox">
+        <li *ngFor="let chat of chats" [class]="chat.type">
+          <span *ngIf="chat.type === 'incoming'" class="material-symbol-outlined">
+             <i class="pi pi-android" style="font-size: 1rem" ></i>
+          </span>
+          <p>{{ chat.message }}</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." [(ngModel)]="userMessage" required></textarea>
+        
+        <button id="send-btn" class="material-symbol-outlined" (keyup.enter)="handleChat()" (click)="handleChat()">
+            <i class="pi pi-send" style="font-size: 1.5rem" ></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  

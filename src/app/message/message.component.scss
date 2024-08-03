@@ -1,17 +1,25 @@
 .message {
     padding: 10px;
-    margin: 5px 0;
+    margin: 5px 5px;
     border-radius: 5px;
+    display: flex;
+      justify-content: end;
+    align-items: flex-end;
     word-break: break-word;
   }
   
   .user-message {
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: max-content;
     background-color: #e0f7fa;
     align-self: flex-end;
     text-align: right;
   }
   
   .bot-message {
+    width: max-content;
     background-color: #fce4ec;
     align-self: flex-start;
     text-align: left;

@@ -1,8 +1,24 @@
-<div class="chat-container">
-    <app-message *ngFor="let message of messages" [message]="message"></app-message>
-    <div class="input-container">
-      <input [(ngModel)]="newMessage" (keyup.enter)="sendMessage()" placeholder="Type a message..." />
+<!-- <div class="chat-container">
+    <div class="message-list">
+      <div *ngFor="let message of messages" [ngClass]="{'user-message': message.from === 'user', 'bot-message': message.from === 'bot'}">
+        {{ message.text }}
+      </div>
+    </div>
+    <input [(ngModel)]="userMessage" (keyup.enter)="sendMessage()" placeholder="Type a message..." />
+    <button (click)="sendMessage()">Send</button>
+  </div> -->
+  <div class="chat-container">
+    <div *ngFor="let message of messages">
+      <div [ngClass]="{'user-message': message.role === 'user', 'assistant-message': message.role === 'assistant'}">
+        {{ message.content }}
+      </div>
+    </div>
+  
+    <div class="chat-input">
+      <input [(ngModel)]="prompt" (keyup.enter)="sendMessage()" placeholder="Type your message here..." />
       <button (click)="sendMessage()">Send</button>
     </div>
+  
+    <button (click)="clearChatHistory()">Clear Chat History</button>
   </div>
   

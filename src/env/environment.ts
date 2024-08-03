@@ -1,4 +1,5 @@
 export const environment = {
     production: false,
-    whisperApiUrl: 'YOUR_WHISPER_API_ENDPOINT'
+    apiUrl: 'http://172.16.16.144:11434' // Replace with your private server URL
   };
+  
