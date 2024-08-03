@@ -1,1 +1,16 @@
-<p>speech-converter works!</p>
+<div class="hero">
+    <h1>Text To Speech <span>Converter</span></h1>
+
+    <textarea placeholder="Write anything here..."></textarea>
+    <div class="row">
+
+      <select (change)="updateVoice($event)">
+        <option *ngFor="let voice of voices; let i = index" [value]="i">{{ voice.name }}</option>
+      </select>
+      
+      <button (click)="convertTextToSpeech()">
+        <i class="pi pi-play" style="font-size: 1rem"></i>
+        Listen
+      </button>
+    </div>
+  </div>

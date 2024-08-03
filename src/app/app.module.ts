@@ -12,7 +12,7 @@ import { SpeechConverterComponent } from './speech-converter/speech-converter.co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
