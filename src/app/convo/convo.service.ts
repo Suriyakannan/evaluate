@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ChatbotService {
-  private apiUrl = 'https://api-inference.huggingface.co/models/facebook/bart-large-cnn';
-  private apiKey = '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'; // Add your OpenAI API key here
+  private apiUrl = '';
+  private apiKey = '' ;
 
   constructor(private http: HttpClient) { }
 
