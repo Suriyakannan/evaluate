@@ -18,11 +18,11 @@ export class ChatService {
   //     map(response => response.reply)
   //   );
   // // }
-  // private apiUrl = 'https://api.openai.com/v1/chat/completions';
-  // private apiKey = 'sk-8VuFylLJVwYalBC52WNIPTsbPFMDH4Slclu7wjdmtNT3BlbkFJPRwigSjEfvrWCTxfiHYtNJeEE9YqhnnyaLsWkVc1UA';
+  // private apiUrl = '';
+  // private apiKey = '';
 
-  private apiUrl = 'http://172.16.16.144:11434'; // Update this to your Olama endpoint
-  // private apiKey = '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'; 
+  private apiUrl = ''; // Update this to your Olama endpoint
+  // private apiKey = ''; 
 
   constructor(private http: HttpClient) { }
 
